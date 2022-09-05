@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lawyerOffice>
+    <address>
+        <country>Spain</country>
+        <city>Madrid</city>
+        <houseNumber>10</houseNumber>
+    </address>
+    <staff>
+        <lawyers>
+            <lawyer name="Rachel Green">
+                <address>
+                    <country>Belarus</country>
+                    <city>Paris</city>
+                    <houseNumber>12</houseNumber>
+                </address>
+                <birth>
+                    <dateOfBirth>1990-6-2</dateOfBirth>
+                </birth>
+            </lawyer>
+            <lawyer name="Monica Geller">
+                <address>
+                    <country>Belarus</country>
+                    <city>London</city>
+                    <houseNumber>101</houseNumber>
+                </address>
+                <birth>
+                    <dateOfBirth>1986-12-8</dateOfBirth>
+                </birth>
+            </lawyer>
+            <lawyer name="John">
+                <address>
+                    <country>Belarus</country>
+                    <city>Brest</city>
+                    <houseNumber>148</houseNumber>
+                </address>
+                <birth>
+                    <dateOfBirth>1990-11-1</dateOfBirth>
+                </birth>
+            </lawyer>
+            <lawyer name="Nikita">
+                <address>
+                    <country>Belarus</country>
+                    <city>Porto</city>
+                    <houseNumber>101</houseNumber>
+                </address>
+                <birth>
+                    <dateOfBirth>2000-3-4</dateOfBirth>
+                </birth>
+            </lawyer>
+        </lawyers>
+    </staff>
+    <servicesList>
+        <service1>
+            <visitTime>
+                <minutes>30</minutes>
+                <hours>2</hours>
+            </visitTime>
+        </service1>
+        <service2>
+            <descriptionOfServices>ASAP</descriptionOfServices>
+        </service2>
+        <service3>
+            <descriptionOfServices>ASAP</descriptionOfServices>
+        </service3>
+    </servicesList>
+    <clientsList>
+        <client1>
+            <clientCase>
+                <description>Divorce process</description>
+            </clientCase>
+            <money>1500</money>
+        </client1>
+        <client2>
+            <clientCase>
+                <description>Aliments</description>
+            </clientCase>
+            <money>1350</money>
+        </client2>
+    </clientsList>
+</lawyerOffice>

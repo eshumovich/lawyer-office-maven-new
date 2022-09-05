@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="lawyerOffice">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="address">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="country" type="xs:string" />
+                            <xs:element name="city" type="xs:string" />
+                            <xs:element name="houseNumber" type="xs:unsignedByte" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="staff">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="lawyers">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element maxOccurs="unbounded" name="lawyer">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="address">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="country" type="xs:string" />
+                                                                <xs:element name="city" type="xs:string" />
+                                                                <xs:element name="houseNumber" type="xs:unsignedByte" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="birth">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="dateOfBirth" type="xs:string" />
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute name="name" type="xs:string" use="required" />
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="servicesList">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="service1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="visitTime">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="minutes" type="xs:unsignedByte" />
+                                                    <xs:element name="hours" type="xs:unsignedByte" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="service2">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="descriptionOfServices" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="service3">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="descriptionOfServices" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="clientsList">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="client1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="clientCase">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="description" type="xs:string" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="money" type="xs:unsignedShort" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="client2">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="clientCase">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="description" type="xs:string" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="money" type="xs:unsignedShort" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
