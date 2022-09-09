@@ -1,7 +1,9 @@
 package com.solvd.lawyers;
 
-import java.util.Objects;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Address {
 
     private String country;
@@ -12,6 +14,10 @@ public class Address {
         this.country = country;
         this.city = city;
         this.houseNumber = houseNumber;
+    }
+
+    public Address() {
+
     }
 
     public String getCountry() {
@@ -36,5 +42,14 @@ public class Address {
 
     public void setHouseNumber(Integer houseNumber) {
         this.houseNumber = houseNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "country='" + country + '\'' +
+                ", city='" + city + '\'' +
+                ", houseNumber=" + houseNumber +
+                '}';
     }
 }

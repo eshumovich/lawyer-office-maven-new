@@ -1,80 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<lawyerOffice>
-    <address>
-        <country>Spain</country>
-        <city>Madrid</city>
-        <houseNumber>10</houseNumber>
-    </address>
-    <staff>
-        <lawyers>
-            <lawyer name="Rachel Green">
-                <address>
-                    <country>Belarus</country>
-                    <city>Paris</city>
-                    <houseNumber>12</houseNumber>
-                </address>
-                <birth>
-                    <dateOfBirth>1990-6-2</dateOfBirth>
-                </birth>
-            </lawyer>
-            <lawyer name="Monica Geller">
-                <address>
-                    <country>Belarus</country>
-                    <city>London</city>
-                    <houseNumber>101</houseNumber>
-                </address>
-                <birth>
-                    <dateOfBirth>1986-12-8</dateOfBirth>
-                </birth>
-            </lawyer>
-            <lawyer name="John">
-                <address>
-                    <country>Belarus</country>
-                    <city>Brest</city>
-                    <houseNumber>148</houseNumber>
-                </address>
-                <birth>
-                    <dateOfBirth>1990-11-1</dateOfBirth>
-                </birth>
-            </lawyer>
-            <lawyer name="Nikita">
-                <address>
-                    <country>Belarus</country>
-                    <city>Porto</city>
-                    <houseNumber>101</houseNumber>
-                </address>
-                <birth>
-                    <dateOfBirth>2000-3-4</dateOfBirth>
-                </birth>
-            </lawyer>
-        </lawyers>
-    </staff>
-    <servicesList>
-        <service1>
-            <visitTime>
-                <minutes>30</minutes>
-                <hours>2</hours>
-            </visitTime>
-        </service1>
-        <service2>
-            <descriptionOfServices>ASAP</descriptionOfServices>
-        </service2>
-        <service3>
-            <descriptionOfServices>ASAP</descriptionOfServices>
-        </service3>
-    </servicesList>
-    <clientsList>
-        <client1>
+
+<lawyerOffice name="REDCLEARING" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="lawyerOffice.xsd">
+    <lawyers>
+        <lawyer name="Rachel Green">
+            <address>
+                <country>France</country>
+                <city>Paris</city>
+                <houseNumber>12</houseNumber>
+            </address>
+            <birthday>1990-10-12</birthday>
+            <rating>7</rating>
+            <salary>1100</salary>
+        </lawyer>
+        <lawyer name="Monica Geller">
+            <address>
+                <country>UK</country>
+                <city>London</city>
+                <houseNumber>101</houseNumber>
+            </address>
+            <birthday>1986-12-08</birthday>
+            <rating>9</rating>
+            <salary>1500</salary>
+        </lawyer>
+        <lawyer name="John">
+            <address>
+                <country>Belarus</country>
+                <city>Brest</city>
+                <houseNumber>148</houseNumber>
+            </address>
+            <birthday>1990-05-01</birthday>
+            <rating>8</rating>
+            <salary>1300</salary>
+        </lawyer>
+        <lawyer name="Nikita">
+            <address>
+                <country>Spain</country>
+                <city>Porto</city>
+                <houseNumber>101</houseNumber>
+            </address>
+            <birthday>2000-08-04</birthday>
+            <rating>5</rating>
+            <salary>700</salary>
+        </lawyer>
+    </lawyers>
+    <services>
+        <service>
+            <descriptionOfService>Low Severity</descriptionOfService>
+        </service>
+        <service>
+            <descriptionOfService>ASAP</descriptionOfService>
+        </service>
+        <service>
+            <descriptionOfService>ASAP</descriptionOfService>
+        </service>
+    </services>
+    <clients>
+        <client>
             <clientCase>
                 <description>Divorce process</description>
             </clientCase>
             <money>1500</money>
-        </client1>
-        <client2>
+        </client>
+        <client>
             <clientCase>
                 <description>Aliments</description>
             </clientCase>
             <money>1350</money>
-        </client2>
-    </clientsList>
+        </client>
+    </clients>
 </lawyerOffice>

@@ -1,26 +1,23 @@
 package com.solvd.lawyers.characteristic;
 
-import com.solvd.lawyers.worktime.VisitTime;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.math.BigDecimal;
-import java.util.Objects;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Service {
 
     private static final Logger LOGGER = LogManager.getLogger(Service.class);
 
-    private VisitTime visitTime;
     private String descriptionOfService;
 
     public Service(String descriptionOfService) {
         this.descriptionOfService = descriptionOfService;
     }
 
-    public Service(VisitTime visitTime) {
-        super();
-        this.visitTime = visitTime;
+    public Service() {
     }
 
     public String getDescriptionOfService() {
@@ -31,11 +28,10 @@ public class Service {
         this.descriptionOfService = descriptionOfService;
     }
 
-    public VisitTime getVisitTime() {
-        return visitTime;
-    }
-
-    public void setVisitTime(VisitTime visitTime) {
-        this.visitTime = visitTime;
+    @Override
+    public String toString() {
+        return "Service{" +
+                ", descriptionOfService='" + descriptionOfService + '\'' +
+                '}';
     }
 }

@@ -1,0 +1,70 @@
+{
+  "name": "REDCLEARING",
+  "lawyers": [
+    {
+      "address": {
+        "country": "France",
+        "city": "Paris",
+        "houseNumber": 12
+      },
+      "birthday": "1990-10-12",
+      "rating": 7,
+      "salary": 1100
+    },
+    {
+      "address": {
+        "country": "UK",
+        "city": "London",
+        "houseNumber": 101
+      },
+      "birthday": "1986-12-08",
+      "rating": 9,
+      "salary": 1500
+    },
+    {
+      "address": {
+        "country": "Belarus",
+        "city": "Brest",
+        "houseNumber": 148
+      },
+      "birthday": "1990-05-01",
+      "rating": 8,
+      "salary": 1300
+    },
+    {
+      "address": {
+        "country": "Spain",
+        "city": "Porto",
+        "houseNumber": 101
+      },
+      "birthday": "2000-08-04",
+      "rating": 5,
+      "salary": 700
+    }
+  ],
+  "services": [
+    {
+      "descriptionOfService": "Low Severity"
+    },
+    {
+      "descriptionOfService": "ASAP"
+    },
+    {
+      "descriptionOfService": "ASAP"
+    }
+  ],
+  "clients": [
+    {
+      "clientCase": {
+        "description": "Divorce process"
+      },
+      "money": 1500
+    },
+    {
+      "clientCase": {
+        "description": "Aliments"
+      },
+      "money": 1350
+    }
+  ]
+}

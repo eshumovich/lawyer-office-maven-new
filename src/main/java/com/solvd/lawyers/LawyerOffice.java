@@ -1,29 +1,43 @@
 package com.solvd.lawyers;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.solvd.lawyers.characteristic.Client;
+import com.solvd.lawyers.characteristic.Lawyer;
 import com.solvd.lawyers.characteristic.Service;
-import com.solvd.lawyers.characteristic.Staff;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.xml.bind.annotation.*;
 import java.util.List;
-import java.util.Map;
 
-public class LawyerOffice  {
+@XmlRootElement(name = "lawyerOffice")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class LawyerOffice {
 
     private static final Logger LOGGER = LogManager.getLogger(LawyerOffice.class);
 
-    private Address address;
-    private Staff staff;
+    @XmlAttribute
+    private String name;
+    @XmlElementWrapper
+    @XmlElement(name = "service")
+    @JsonProperty("services")
     private List<Service> services;
+    @XmlElementWrapper
+    @XmlElement(name = "client")
+    @JsonProperty("clients")
     private List<Client> clients;
-    private Map<String, Client> schedule;
+    @XmlElementWrapper
+    @XmlElement(name = "lawyer")
+    @JsonProperty("lawyers")
+    private List<Lawyer> lawyers;
 
-    public LawyerOffice(Address address, Staff staff, List<Client> clients, List<Service> services) {
-        this.address = address;
-        this.staff = staff;
+    public LawyerOffice(List<Lawyer> lawyers, List<Client> clients, List<Service> services) {
+        this.lawyers = lawyers;
         this.clients = clients;
         this.services = services;
+    }
+
+    public LawyerOffice() {
     }
 
     public void startCase() {
@@ -40,38 +54,32 @@ public class LawyerOffice  {
     public int countClients() {
         int counter = 0;
         for (Client client : clients) {
-            LOGGER.info("Client: " + " Name " + " " + client.getClientCase() );
+            LOGGER.info("Client: " + " Name " + " " + client.getClientCase());
             counter++;
         }
         return counter;
     }
 
     public void showServices() {
-        for(Service service : services) {
+        for (Service service : services) {
             LOGGER.info("Show service: " + service.getDescriptionOfService());
         }
     }
 
-    public void showSchedule() {
-        for (Map.Entry<String, Client> entry : this.schedule.entrySet()) {
-            LOGGER.info(entry.getKey() + "  :  " + entry.getValue());
-        }
+    public String getName() {
+        return name;
     }
 
-    public Address getAddress(){
-        return address;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+    public List<Lawyer> getLawyers() {
+        return lawyers;
     }
 
-    public Staff getStaff() {
-        return staff;
-    }
-
-    public void setStaff(Staff staff) {
-        this.staff = staff;
+    public void setLawyers(List<Lawyer> lawyers) {
+        this.lawyers = lawyers;
     }
 
     public List<Service> getServices() {
@@ -90,12 +98,14 @@ public class LawyerOffice  {
         this.clients = clients;
     }
 
-    public Map<String, Client> getSchedule() {
-        return schedule;
-    }
-
-    public void setSchedule(Map<String, Client> schedule) {
-        this.schedule = schedule;
+    @Override
+    public String toString() {
+        return "LawyerOffice{" +
+                "name='" + name + '\'' +
+                ", services=" + services +
+                ", clients=" + clients +
+                ", lawyers=" + lawyers +
+                '}';
     }
 }
 
