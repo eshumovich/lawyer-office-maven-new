@@ -29,9 +29,11 @@ public class Lawyer {
     private String name;
     private Address address;
     private int rating;
+
     @XmlJavaTypeAdapter(LocalDateAdapterJaxb.class)
     @JsonDeserialize(using = LocalDateDeserializerJson.class)
     private LocalDate birthday;
+
     @XmlJavaTypeAdapter(BigDecimalAdapterJaxb.class)
     @JsonDeserialize(using = BigDecimalDeserializerJson.class)
     private BigDecimal salary;

@@ -17,6 +17,7 @@ public class Client {
     private static final Logger LOGGER = LogManager.getLogger(Client.class);
 
     private ClientCase clientCase;
+
     @XmlJavaTypeAdapter(BigDecimalAdapterJaxb.class)
     @JsonDeserialize(using = BigDecimalDeserializerJson.class)
     private BigDecimal money;

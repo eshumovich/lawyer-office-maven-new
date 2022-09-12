@@ -7,10 +7,10 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 
-public class JaxbParser implements IParse{
+public class JaxbParser implements IParse {
+
     @Override
     public LawyerOffice parse(String fileName) {
-
         LawyerOffice lawyerOffice;
         File xmlFIle = new File(fileName);
 

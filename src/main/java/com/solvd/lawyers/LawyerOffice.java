@@ -18,14 +18,17 @@ public class LawyerOffice {
 
     @XmlAttribute
     private String name;
+
     @XmlElementWrapper
     @XmlElement(name = "service")
     @JsonProperty("services")
     private List<Service> services;
+
     @XmlElementWrapper
     @XmlElement(name = "client")
     @JsonProperty("clients")
     private List<Client> clients;
+
     @XmlElementWrapper
     @XmlElement(name = "lawyer")
     @JsonProperty("lawyers")

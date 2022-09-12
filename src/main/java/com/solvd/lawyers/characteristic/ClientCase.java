@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.time.Period;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class ClientCase{
+public class ClientCase {
 
     private static final Logger LOGGER = LogManager.getLogger(ClientCase.class);
 

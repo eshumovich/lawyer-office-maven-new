@@ -14,7 +14,7 @@ public class BigDecimalDeserializerJson extends StdDeserializer<BigDecimal> {
     }
 
     @Override
-    public BigDecimal deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException{
+    public BigDecimal deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException {
         return BigDecimal.valueOf(Long.parseLong(jsonParser.readValueAs(String.class)));
     }
 }

@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 import java.time.LocalDate;
 
 public class LocalDateAdapterJaxb extends XmlAdapter<String, LocalDate> {
+
     @Override
     public LocalDate unmarshal(String localDate) throws Exception {
         return LocalDate.parse(localDate);

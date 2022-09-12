@@ -7,10 +7,10 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class JsonParser implements IParse{
+public class JsonParser implements IParse {
+
     @Override
     public LawyerOffice parse(String fileName) {
-
         LawyerOffice lawyerOffice;
         ObjectMapper objectMapper = new ObjectMapper();
 
